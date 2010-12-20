@@ -10,12 +10,12 @@
  */
 require_once('config.php');
 if (CONSUMER_KEY === '' || CONSUMER_SECRET === '') {
-  echo 'You need a consumer key and secret to test the sample code. Get one from <a href="https://open.t.qq.com/apps.php">https://open.t.qq.com/apps.php</a>';
+  echo 'You need a consumer key and secret to test the sample code. Get one from <a href="https://tqq.com/apps">https://tqq.com/apps</a>';
   exit;
 }
 
 /* Build an image link to start the redirect process. */
-$content = '<a href="./redirect.php"><img src="./images/lighter.png" alt="Sign in with Tqq"/></a>';
+$content = '<a href="./redirect.php"><img src="images/signin.jpeg" alt="Connect to http://t.qq.com/"></img></a>';
  
 /* Include HTML to display on the page. */
 include('html.inc');

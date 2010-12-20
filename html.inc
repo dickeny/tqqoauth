@@ -13,18 +13,10 @@
     <div>
       <h2>Welcome to a Tqq OAuth PHP example.</h2>
 
-      <pre>
-        <?php print_r($access_token); ?>
-      </pre>
       <p>This site is a basic showcase of Tqqs OAuth authentication method. If you are having issues try <a href='./clearsessions.php'>clearing your session</a>.</p>
 
-      <p>
-        Links:
-        <a href='http://github.com/abraham/tqqoauth'>Source Code</a> &amp;
-        <a href='http://wiki.github.com/abraham/tqqoauth/documentation'>Documentation</a> |
-        Contact @<a href='http://tqq.com/abraham'>abraham</a>
-      </p>
       <hr />
+      <p><a href='./test.php'>Go test</a></p>
       <?php if (isset($menu)) { ?>
         <?php echo $menu; ?>
       <?php } ?>
@@ -33,9 +25,6 @@
       <?php echo '<h3>'.$status_text.'</h3>'; ?>
     <?php } ?>
     <p>
-      <pre>
-        <?php print_r($access_token); ?>
-      </pre>
       <pre>
         <?php print_r($content); ?>
       </pre>
