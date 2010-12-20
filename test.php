@@ -97,34 +97,34 @@ $methods = array(
     'timeline' => array(
         array('GET', 'statuses/home_timeline', array("pagetime"=>0, "reqnum"=>20, 'pageflag'=>0) ),
         array('GET', 'statuses/public_timeline', array('pos'=>0, 'reqnum'=>20) ),
-        array('GET', 'statuses/user_timeline', array('name'=>'talebook'),
-        array('GET', 'statuses/mentions_timeline'),
-        array('GET', 'statuses/ht_timeline'),
-        array('GET', 'statuses/broadcast_timeline'),
+        array('GET', 'statuses/user_timeline', array('name'=>'talebook')),
+        array('GET', 'statuses/mentions_timeline', array() ),
+        array('GET', 'statuses/ht_timeline', array('httest'=>'linux') ),
+        array('GET', 'statuses/broadcast_timeline', array() ),
     ),
     't blog' => array(
-        array('POST', 't/add'),
-        array('GET', 't/show'),
-        array('DELETE', 't/del'),
-        array('POST', 't/re_add'),
-        array('POST', 't/reply'),
-        array('POST', 't/add_pic'),
-        array('POST', 't/re_count'),
-        array('POST', 't/re_list'),
+        array('POST', 't/add', array() ),
+        array('GET', 't/show', array() ),
+        array('DELETE', 't/del', array() ),
+        array('POST', 't/re_add', array() ),
+        array('POST', 't/reply', array() ),
+        array('POST', 't/add_pic', array() ),
+        array('POST', 't/re_count', array() ),
+        array('POST', 't/re_list', array() ),
     ),
     'user info' => array(
-        array('GET', 'user/info'),
-        array('GET', 'user/update'),
-        array('GET', 'user/otherinfo'),
+        array('GET', 'user/info', array() ),
+        array('GET', 'user/update', array() ),
+        array('GET', 'user/otherinfo', array() ),
     ),
     'friends' => array(
-        array('GET', 'friends/fanslist'),
-        array('GET', 'friends/idollist'),
-        array('POST', 'friends/add'),
-        array('POST', 'friends/addspecial'),
-        array('GET', 'friends/check'),
-        array('GET', 'friends/user_fanslist'),
-        array('GET', 'friends/user_idollist'),
+        array('GET', 'friends/fanslist', array() ),
+        array('GET', 'friends/idollist', array() ),
+        array('POST', 'friends/add', array() ),
+        array('POST', 'friends/addspecial', array() ),
+        array('GET', 'friends/check', array() ),
+        array('GET', 'friends/user_fanslist', array() ),
+        array('GET', 'friends/user_idollist', array() ),
     ),
 );
 
@@ -134,7 +134,7 @@ foreach ( $methods as $section => $actions ) {
     foreach ( $actions as $action ) {
         $req = $action[0];
         $url = $action[1];
-        $arg = array();
+        $arg = $action[2];
         if ( $req == 'GET' ){
             $status = $connection->get($url, $arg);
         }
