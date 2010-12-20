@@ -81,11 +81,6 @@ class TqqOAuth {
     $request = $this->oAuthRequest($this->requestTokenURL(), 'GET', $parameters);
     $token = OAuthUtil::parse_parameters($request);
     $this->token = new OAuthConsumer($token['oauth_token'], $token['oauth_token_secret']);
-    echo "<pre>\n";
-    print_r($this);
-    print_r($parameters);
-    print_r($this->url);
-    echo "</pre>\n";
     return $token;
   }
 
